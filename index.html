@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <script src="/script/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <h1><img src="Img/Logo.png" class="logo" alt=""></h1>
+    <form id="formulario" class="form-encriptar">
+        <textarea cols="50" rows="15" id="mensaje" class="input-padron" placeholder="Ingrese el texto aqui" required></textarea>
+        <label class="informativo">Solo letras minusculas y sin acentos</label>        
+            <button type="button" class="btn-encriptar" onclick="encriptar()">Encriptar</button>
+            <button type="button" class="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>        
+    </form>
+    
+    <!-- Section no found text -->
+
+    <section id="error" class="contenedor-desencriptar">
+        <img class="muneco" src="Img/Muñeco.png" alt="no hay texto para encriptar o desencriptar">
+        <div class="contenedor-error">
+            <h1>Ningun mensaje fue encontrado</h1>
+            <h2>Ingresa el texto que deseas encriptar o desencriptar</h2>
+        </div>       
+    </section>
+
+    <div id="traductor" class="contenedor-desencriptar" style="display:none">        
+        <div id="textoCopiar" class="traductor"></div> 
+        <button type="button" id="btncopiar" class="btn-copiar" onclick="copiar()">Copiar</button>          
+    </div>
+
+</body>
+
+</html>
