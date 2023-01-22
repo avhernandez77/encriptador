@@ -1,8 +1,9 @@
 function desencriptar() {
 
-    validar();
+    validar();   
 
-    var frase = document.getElementById('mensaje').value;
+    var frase = document.getElementById('mensaje').value;   
+    frase = frase.toLowerCase(); 
 
     var txtDesencriptado = frase.replace(/enter/img, "e");
     var txtDesencriptado = txtDesencriptado.replace(/ober/img, "o");
@@ -18,6 +19,7 @@ function encriptar() {
     validar();   
 
     var frase = document.getElementById('mensaje').value;
+    frase = frase.toLowerCase(); 
 
     var txtEncriptado = frase.replace(/e/img, "enter");
     var txtEncriptado = txtEncriptado.replace(/o/img, "ober");
@@ -36,7 +38,9 @@ function copiar() {
 }
 
 function validar() {
+    
     let txt = document.getElementById('mensaje').value.length;
+
 
     if (txt == 0) {        
         document.getElementById('traductor').style.display='none';
